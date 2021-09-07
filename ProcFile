@@ -1,1 +1,0 @@
-web: gunicorn --pythonpath blogNews blogNews.wsgi
