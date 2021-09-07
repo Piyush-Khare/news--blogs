@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'froala_editor',
     'rest_framework',
-    whitenoise.runserver_nostatic,
+    
     
 ]
 
