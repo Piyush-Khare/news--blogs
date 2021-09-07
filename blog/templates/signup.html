@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid px-3">
+  <div class="row" style="height: 513px;">
+    <div class="col-md-8 col-lg-6 col-xl-5 d-flex align-items-center" style="height: fit-content;">
+      <div class="w-100 py-4 px-md-5 px-xl-6 position-relative">
+        <form name="myform" action="JavaScript:signup()">
+          <div class="form-validate">
+            <div class="form-group mt-3">
+              <label class="form-label" for="signupName">Name</label>
+              <input class="form-control" type="text" id="signupName" name="signupName" placeholder="Enter your Name"
+                maxlength="30" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label mt-3" for="email">Your Email</label>
+              <div class="mx-0">
+                <div class="col-md-8 px-0">
+                  <input class="form-control" type="email" placeholder="name@address.com" autocomplete="off"
+                    id="signupEmail" name="signupEmail" email="" maxlength="40" required>
+                  <!---->
+                  <!---->
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <div class="row">
+                <div class="col">
+                  <label class="form-label" for="signupPassword1">Choose a Password</label>
+                </div>
+              </div>
+              <input class="form-control" name="signupPassword1" id="signupPassword1" placeholder="Password" type="password"
+                required data-msg="Please enter your password" minlength="6"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+              <small id="passhelp" class="form-text text-muted px-1">Must contain at least one number and one uppercase and lowercase letter,
+              and at least 6 or more characters</small>
+            </div>
+
+            <div class="form-group mt-3">
+              <label class="form-label" for="signupPassword2">Confirm your password</label>
+              <input class="form-control" type="password" id="signupPassword2" name="signupPassword2"
+                placeholder="Confirm your password" minlength="6"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+            </div>
+
+            <ngx-invisible-recaptcha class="ng-untouched ng-pristine ng-valid">
+              <div>
+                <div id="ngx_captcha_id_7818">
+                  <div class="grecaptcha-badge" data-style="bottomright"
+                    style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
+                    <div class="grecaptcha-logo">
+                      <iframe title="reCAPTCHA"
+                        src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6Lf8EMkaAAAAAMDraR1vekR1rPpYJQ3vmiRP57Di&amp;co=aHR0cHM6Ly93d3cuY29kZXdpdGhoYXJyeS5jb206NDQz&amp;hl=en&amp;type=image&amp;v=Q_rrUPkK1sXoHi4wbuDTgcQR&amp;theme=light&amp;size=invisible&amp;badge=bottomright&amp;cb=ukicbw348kwc"
+                        width="256" height="60" role="presentation" name="a-98dxf82uogqw" frameborder="0" scrolling="no"
+                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox">
+                      </iframe>
+                    </div>
+                    <div class="grecaptcha-error">
+                    </div>
+                    <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
+                      style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;">
+                            </textarea>
+                  </div>
+                  <iframe style="display: none;"></iframe>
+                </div>
+              </div>
+            </ngx-invisible-recaptcha>
+
+            <!-- Submit-->
+            <button class="btn btn-lg btn-block btn-primary mt-3">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-6 col-xl-7 d-none d-md-block shadow">
+    <!-- Image-->
+    <div class="bg-cover h-100 mr-n3"
+      style="background-image: url(https://www.ecoseoexperts.com/wp-content/uploads/2019/03/BLOG-NEWS-Website.jpg);width: 96%;">
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}
