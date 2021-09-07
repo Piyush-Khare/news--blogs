@@ -46,8 +46,8 @@ INSTALLED_APPS = [
     
 ]
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+# SECRET_KEY = config('SECRET_KEY')
+# DEBUG = config('DEBUG', default=False, cast=bool)
 
 
 MIDDLEWARE = [
@@ -86,9 +86,7 @@ WSGI_APPLICATION = 'blogNews.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+    'default': dj_database_url.config()
 }
 
 
